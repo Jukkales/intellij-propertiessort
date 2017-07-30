@@ -1,0 +1,33 @@
+<idea-plugin>
+    <id>de.juserv.intellij-propertiessort</id>
+    <name>IntelliJ IDEA Properties Sorter</name>
+    <version>1.0</version>
+    <vendor email="sh@nodch.de">Jukka</vendor>
+
+    <description><![CDATA[
+        If you are working on a project where different IDEs are used, properties files will often cause merge conflicts because of different format and ordering.
+
+        This plugin sorts and can format the property files inside IDEA.
+
+        All properties will be sorted alphabetically and the intention can be grouped by keys or over all.
+    ]]></description>
+
+    <change-notes><![CDATA[
+        Version 0.1
+        <ul>
+            <li>Quick and Dirty Initial Release.</li>
+        </ul>
+    ]]>
+    </change-notes>
+
+    <idea-version since-build="145.0"/>
+    <depends>com.intellij.modules.lang</depends>
+    <depends>com.intellij.modules.platform</depends>
+
+    <actions>
+        <action id="sortProperties" class="de.juserv.SortPropertiesAction" text="Sort Properties..."
+                description="Sort and rearrange Properties">
+            <add-to-group group-id="GenerateGroup" anchor="last"/>
+        </action>
+    </actions>
+</idea-plugin>
