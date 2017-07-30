@@ -32,11 +32,6 @@
         <!-- IntelliJ SDK -->
         <dependency>
             <groupId>com.intellij</groupId>
-            <artifactId>annotations</artifactId>
-            <version>12.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.intellij</groupId>
             <artifactId>openapi</artifactId>
             <scope>system</scope>
             <systemPath>${lib.path}/openapi.jar</systemPath>
