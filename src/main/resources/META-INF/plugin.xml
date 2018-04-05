@@ -1,7 +1,7 @@
 <idea-plugin url="https://github.com/Jukkales/intellij-propertiessort">
     <id>de.juserv.intellij-propertiessort</id>
     <name>IntelliJ IDEA Properties Sorter</name>
-    <version>0.1</version>
+    <version>0.2</version>
     <vendor email="sh[at]nodch[dot]de">Steffen Herrmann</vendor>
 
     <description><![CDATA[
@@ -15,6 +15,10 @@
     ]]></description>
 
     <change-notes><![CDATA[
+        Version 0.2<br>
+        <ul>
+            <li>Support for grouping based on underscore character added.</li>
+        </ul>
         Version 0.1<br>
         <ul>
             <li>Quick and Dirty Initial Release.</li>
