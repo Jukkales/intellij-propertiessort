@@ -8,6 +8,8 @@ All properties will be sorted alphabetically and the intention can be grouped by
 
 ### Versions
 
+- Version 0.2
+  - Support for grouping based on underscore character added.
 - Version 0.1
   - Quick and Dirty Initial Release.
 
