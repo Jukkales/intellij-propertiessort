@@ -85,7 +85,7 @@ public class SortPropertiesAction extends AnAction {
 
         String last = "";
         for (String key : sorted) {
-            String current = key.split("\\.")[0];
+            String current = key.split("\\.|_")[0];
             if (!"".equals(last) && !last.equals(current) && settings.isSplitGroups()) {
                 sb.append("\n");
             }
