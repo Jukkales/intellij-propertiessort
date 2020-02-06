@@ -1,20 +1,27 @@
-<idea-plugin url="https://github.com/Jukkales/intellij-propertiessort">
+<idea-plugin>
     <id>de.juserv.intellij-propertiessort</id>
     <name>IntelliJ IDEA Properties Sorter</name>
-    <version>0.1</version>
     <vendor email="sh[at]nodch[dot]de">Steffen Herrmann</vendor>
+
 
     <description><![CDATA[
         If you are working on a project where different IDEs are used, properties files will often cause merge conflicts because of different format and ordering.<br>
         This plugin can sorts and format property files directly in IntelliJ.<br>
         All properties will be sorted alphabetically and the intention can be grouped by keys or over all.<br><br>
-
         <b>How to use</b><br><br>
-
         Open a .properties file in IntelliJ, press ALT + INS and select Sort Properties...
     ]]></description>
 
     <change-notes><![CDATA[
+        Version 0.2<br>
+        <ul>
+            <li>Feature: Support for grouping based on underscore character </li>
+            <li>Feature: Save dialog selection on project level</li>
+            <li>Bugfix: keep control characters</li>
+            <li>Bugfix: keep comments</li>
+            <li>Bugfix: split groups without rearrange now working</li>
+        </ul>
+
         Version 0.1<br>
         <ul>
             <li>Quick and Dirty Initial Release.</li>
@@ -22,7 +29,8 @@
     ]]>
     </change-notes>
 
-    <idea-version since-build="145.0"/>
+    <idea-version since-build="163.0"/>
+    <depends>com.intellij.properties</depends>
     <depends>com.intellij.modules.lang</depends>
     <depends>com.intellij.modules.platform</depends>
 

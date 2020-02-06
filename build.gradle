@@ -1,0 +1,46 @@
+plugins {
+    id 'org.jetbrains.intellij' version '0.4.8'
+}
+
+apply plugin: 'org.jetbrains.intellij'
+apply plugin: 'java'
+apply plugin: 'idea'
+
+sourceCompatibility = javaVersion
+targetCompatibility = javaTargetVersion
+
+group 'de.juserv'
+version '0.2'
+
+tasks.withType(JavaCompile) { options.encoding = 'UTF-8' }
+
+intellij {
+    version ideaVersion
+    type ideaType
+    pluginName pluginName
+    sandboxDirectory sandboxDirectory
+    downloadSources downloadSources
+    buildSearchableOptions.enabled false
+    
+    plugins 'properties'
+}
+
+idea {
+    module {
+        downloadJavadoc downloadSources
+        downloadSources downloadSources
+    }
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    maven { url 'https://dl.bintray.com/jetbrains/intellij-plugin-service' }
+}
+
+dependencies {
+    compileOnly 'org.projectlombok:lombok:1.18.8'
+    annotationProcessor 'org.projectlombok:lombok:1.18.8'
+    compile 'commons-beanutils:commons-beanutils:1.9.3'
+    compile 'org.apache.commons:commons-configuration2:2.4'
+}
