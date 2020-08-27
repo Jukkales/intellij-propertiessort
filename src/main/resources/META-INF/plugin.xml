@@ -33,6 +33,7 @@
     <depends>com.intellij.properties</depends>
     <depends>com.intellij.modules.lang</depends>
     <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.java</depends>
 
     <actions>
         <action id="sortProperties" class="de.juserv.SortPropertiesAction" text="Sort Properties..."
